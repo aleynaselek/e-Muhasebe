@@ -6,7 +6,7 @@ import { inject } from '@angular/core';
 import { AuthService } from './services/auth.service';
 import { ExamplesComponent } from './components/examples/examples.component';
 import { UsersComponent } from './components/users/users.component';
-// import { ConfirmEmailComponent } from './components/confirm-email/confirm-email.component';
+import { ConfirmEmailComponent } from './components/confirm-email/confirm-email.component';
 // import { CompaniesComponent } from './components/companies/companies.component';
 // import { CashRegistersComponent } from './components/cash-registers/cash-registers.component';
 // import { CashRegisterDetailsComponent } from './components/cash-register-details/cash-register-details.component';
@@ -24,10 +24,10 @@ export const routes: Routes = [
         path: "login",
         component: LoginComponent
     },
-    // {
-    //     path: "confirm-email/:email",
-    //     component: ConfirmEmailComponent
-    // },
+    {
+        path: "confirm-email/:email",
+        component: ConfirmEmailComponent
+    },
     {
         path: "",
         component: LayoutsComponent,
