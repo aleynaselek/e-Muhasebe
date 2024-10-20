@@ -8,7 +8,9 @@ namespace eMuhasebeServer.Application.Features.Users.CreateUser
      string LastName,
      string UserName,
      string Email,
-     string Password,
-     List<Guid> CompanyIds,
-     bool IsAdmin) : IRequest<Result<string>>;
+     string Password
+     //   ,
+     //List<Guid> CompanyIds,
+     //bool IsAdmin
+        ) : IRequest<Result<string>>;
 }
