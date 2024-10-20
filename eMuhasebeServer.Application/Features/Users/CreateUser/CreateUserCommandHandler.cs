@@ -1,6 +1,6 @@
 ﻿using AutoMapper; 
-using eMuhasebeServer.Domain.Entities; 
-using GenericRepository;
+using eMuhasebeServer.Domain.Entities;
+using eMuhasebeServer.Domain.Events; 
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -9,7 +9,7 @@ using TS.Result;
 namespace eMuhasebeServer.Application.Features.Users.CreateUser;
 internal sealed class CreateUserCommandHandler(
     //ICacheService cacheService,
-    //IMediator mediator,
+    IMediator mediator,
     UserManager<AppUser> userManager,
     //ICompanyUserRepository companyUserRepository,
     //IUnitOfWork unitOfWork,
@@ -51,7 +51,7 @@ internal sealed class CreateUserCommandHandler(
         //await unitOfWork.SaveChangesAsync(cancellationToken);
         //cacheService.Remove("users");
 
-        //await mediator.Publish(new AppUserEvent(appUser.Id));
+        await mediator.Publish(new AppUserEvent(appUser.Id));
 
 
         return "Kullanıcı kaydı başarıyla tamamlandı";
