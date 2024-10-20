@@ -10,10 +10,10 @@ namespace eMuhasebeServer.Application.Features.Users.UpdateUser;
 
 internal sealed class UpdateUserCommandHandler(
     //ICacheService cacheService,
-    IMediator mediator,
+    //IMediator mediator,
     UserManager<AppUser> userManager,
     //ICompanyUserRepository companyUserRepository,
-    IUnitOfWork unitOfWork,
+    //IUnitOfWork unitOfWork,
     IMapper mapper) : IRequestHandler<UpdateUserCommand, Result<string>>
 {
     public async Task<Result<string>> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
