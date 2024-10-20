@@ -8,5 +8,4 @@ public sealed class AppUserEvent : INotification
     {
         UserId = userId;
     }
-}
-}
+} 
